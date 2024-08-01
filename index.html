@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de textos</title>
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="/Styles/style.css">
+</head>
+<body>
+    <main>
+        <div class="container-wrapper">
+            <!-- Cabeçalho do aplicativo -->
+            <div class="cabecalho">
+                <!-- Logo do aplicativo -->
+                <img class="cabecalho__titulo" src="/assets/imagens/Default_A_majestic_intricately_designed_golden_royal_crown_ado_2-removebg-preview (1).png" alt="Logo da alura">
+                <h1 class="titulo">Decodificador de Texto</h1>
+            </div>
+            <!-- Seção principal de conteúdo -->
+            <section class="conteudo">
+                <!-- Área de texto para entrada do usuário -->
+                <textarea class="conteudo__texto" type="text" id="conteudo__texto" name="texto-digitado" autofocus placeholder="Como uma DEUSA do Mistério, ordeno que todos os Decretos sejam Criptografados. Envolvam cada palavra em SEGREDO e ENIGMA, para que apenas os mais Astutos possam decifrar o Verdadeiro Sentido."></textarea>
+                <!-- Aviso sobre o formato do texto -->
+                <p class="conteudo__aviso"><img src="/assets/imagens/ponto-de-exclamacao.png" alt="ícone exclamação"> Apenas letras minúsculas e sem acento.</p>
+                <!-- Botões de ação para criptografar, descriptografar e limpar o texto -->
+                <div class="conteudo__botoes">
+                    <button type="button" class="conteudo__botoes__botao botao-criptografar" onclick="criptografar()">Criptografar</button>
+                    <button type="button" class="conteudo__botoes__botao botao-descriptografar" onclick="descriptografar()">Descriptografar</button>
+                    <button type="button" class="conteudo__botoes__botao botao-limpar" onclick="limparTexto()">Limpar Texto</button> 
+                </div>
+            </section>
+        </div>
+        <!-- Seção para exibir o resultado -->
+        <section class="resultado">
+            <!-- Área de texto para exibir o texto criptografado ou descriptografado -->
+            <div class="resultado__completo">
+                <textarea class="resultado__completo__texto" id="texto-resultado" rows="13" cols="30"></textarea>
+                <button type="button" class="resultado__completo__botao" onclick="copiarTexto()">Copiar</button>
+            </div>
+            <!-- Mensagem padrão quando não há texto para exibir -->
+            <div class="resultado__vazio">
+                <img class="resultado__vazio__imagem" src="/assets/imagens/Hera1.jpg" alt="bonequinho segurando uma lupa">
+                <h2 class="resultado__vazio__titulo">Nenhuma mensagem encontrada</h2>
+                <p class="resultado__vazio__informacao">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+        </section>
+    </main>
+    <!-- Rodapé do aplicativo -->
+    <footer class="rodape">
+        <img src="/assets/imagens/CAROL.png" alt="Descrição da Imagem" class="rodape__imagem">
+        <p class="rodape__texto">BY Caroline Lazaro</p>
+    </footer>
+    <!-- Script JavaScript do aplicativo -->
+    <script src="/app.js"></script>
+</body>
+</html>

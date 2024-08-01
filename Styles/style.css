@@ -1,0 +1,313 @@
+/* Importa a fonte Inter do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Ga+Maamli&family=Honk&family=Kalnia+Glaze:wght@700&family=Roboto+Slab:wght@100..900&family=Teko:wght@300..700&display=swap');
+
+/* Reseta o padding e margin para todos os elementos */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Define variáveis de cor para uso em todo o projeto */
+:root {
+    --cor-fundo-principal: #febaf7;
+    --cor-fundo-secundaria: #ffffff;
+    --cor-fundo-gradiente-b: #fe8df4;
+    --cor-fundo-gradiente-c: #7aefff;
+    --cor-fundo-gradiente-d: #7aef;
+    --cor-botao-escuro: #0070cc;
+    --cor-botao-escuro-hover: #014e8d;
+    --cor-botao-claro: #D8DFE8;
+    --cor-texto-claro: #181918;
+    --cor-texto-alerta: #1b1818;
+    --cor-texto-escuro: #961bc7;
+    --cor-texto-grafite: #343A40;
+    --cor-texto-cinza: #495057;
+}
+
+/* Estiliza o corpo da página com um gradiente de fundo e define a fonte padrão */
+body {
+    background-image: linear-gradient(var(--cor-fundo-principal), var(--cor-fundo-principal), var(--cor-fundo-gradiente-b), var(--cor-fundo-gradiente-c), var(--cor-fundo-gradiente-d));
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo-principal);
+    font-family: "Honk", system-ui;
+    color: var(--cor-texto-escuro);
+}
+
+/* Define o wrapper principal do conteúdo para centralização vertical */
+.container-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estiliza o cabeçalho */
+.cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Define o tamanho do título no cabeçalho */
+.cabecalho__titulo {
+    width: 150px; 
+    height: auto;
+}
+
+/* Estiliza o título principal */
+.titulo {
+    padding: 30px 0;
+    width: 100%;
+    text-align: center; /* Centraliza o texto */
+    color: var(--cor-texto-escuro);
+    font-weight: bold;
+    font-size: 4rem;
+    text-shadow: #b6077fbb 2px 2px;
+}
+
+/* Estiliza o elemento main para ocupar a altura total da visualização e exibir conteúdo em linha */
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+/* Define o estilo para o conteúdo principal */
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 20px;
+}
+
+/* Estiliza a área de texto dentro do conteúdo */
+.conteudo__texto {
+    box-sizing: border-box;
+    width: 100%; /* Ocupa a largura total disponível */
+    height: 300px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: whitesmoke;
+    color: var(--cor-texto-claro);
+    font-size: 1.5rem;
+    font-family: "Teko", sans-serif;
+    text-shadow: 0.2px 0px 5px rgb(0, 0, 0);
+    border-radius: 32px;
+    border: none;
+    outline: none;
+    resize: none;
+    text-align: center; /* Centraliza o texto e o placeholder */
+}
+
+.conteudo__texto::-webkit-input-placeholder {
+    color: var(--cor-texto-claro);
+    font-size: 1.5rem;
+    text-shadow: 0.2px 0px 5px #00000022;
+}
+
+/* Estiliza avisos dentro do conteúdo */
+.conteudo__aviso {
+    font-family: "Teko", sans-serif;
+    color: var(--cor-texto-alerta);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estiliza as imagens dentro dos avisos */
+.conteudo__aviso img {
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 40px;
+    height: auto;
+}
+
+/* Estiliza os botões dentro do conteúdo */
+.conteudo__botoes {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Define o estilo dos botões dentro do conteúdo */
+.conteudo__botoes__botao {
+    border-radius: 24px;
+    box-shadow: 1px 1px 20px -5px rgb(0, 0, 0);
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: "Teko", sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estiliza o botão de criptografar */
+.botao-criptografar {
+    font-family: "Roboto Slab", serif;
+    background-color: var(--cor-botao-escuro);
+    color: var(--cor-texto-claro);
+    font-weight: bold;
+}
+
+/* Estiliza o botão de descriptografar */
+.botao-descriptografar {
+    font-family: "Roboto Slab", serif;
+    background-color: var(--cor-botao-claro);
+    color: var(--cor-texto-escuro);
+    font-weight: bold;
+}
+
+/* Estiliza o botão de limpar */
+.botao-limpar {
+    font-family: "Roboto Slab", serif;
+    background-color: var(--cor-fundo-gradiente-c); 
+    color: #181918;
+    font-weight: bold;
+}
+
+/* Estilo para o botão de criptografar no hover */
+.botao-criptografar:hover {
+    background-color: var(--cor-botao-escuro-hover);
+}
+
+/* Estilo para o botão de descriptografar no hover */
+.botao-descriptografar:hover {
+    background-color: var(--cor-fundo-gradiente-b);
+}
+
+/* Estilo para o botão de limpar no hover */
+.botao-limpar:hover {
+    background-color: var(--cor-fundo-gradiente-d); 
+}
+
+/* Estiliza a área de retorno */
+.resultado {
+    box-sizing: border-box;
+    background-color: var(--cor-fundo-secundaria);
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2% 4%;
+    border-radius: 32px;
+    box-shadow: 1px 1px 20px -5px rgb(255, 255, 255);
+    aspect-ratio: 1;
+}
+
+/* Estiliza a área de retorno cheio */
+.resultado__completo {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    height: 100%;
+    font-size: 1.5rem;
+}
+
+/* Estiliza a área de texto dentro da área de retorno */
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    font-family: "Teko", sans-serif;
+    font-size: 1.5rem;
+    color: var(--cor-texto-cinza);
+    font-weight: 400;
+    text-align: center;
+    resize: none;
+    border: none;
+    outline: none;
+    caret-color: transparent;
+}
+
+/* Estiliza o botão dentro da área de retorno cheio */
+.resultado__completo__botao {
+    border-radius: 24px;
+    width: 80%;
+    padding: 0.5rem;
+    margin-bottom: 2%;
+    background-color: var(--cor-botao-claro);
+    border: 2px solid var(--cor-botao-escuro);
+    color: var(--cor-texto-escuro);
+    font-size: 1.5rem;
+    font-family: "Teko", sans-serif;
+}
+
+/* Estilo para o botão na área de retorno cheio no hover */
+.resultado__completo__botao:hover {
+    background-color: var(--cor-fundo-gradiente-b);
+}
+
+/* Estiliza a área de retorno vazio */
+.resultado__vazio {
+    box-sizing: border-box;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
+
+/* Estiliza a imagem dentro da área de retorno vazio */
+.resultado__vazio__imagem {
+    width: 70%;
+    border-radius: 16px;
+    aspect-ratio: 1 / 1; 
+}
+
+/* Estiliza o título dentro da área de retorno vazio */
+.resultado__vazio__titulo {
+    color: var(--cor-texto-grafite);
+    font-family: "Teko", sans-serif;
+    margin: 2% 5%;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Estiliza as informações dentro da área de retorno vazio */
+.resultado__vazio__informacao {
+    color: var(--cor-texto-grafite);
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 10%;
+}
+
+/* Estiliza o rodapé */
+.rodape {
+    display: flex;
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+    justify-content: center;
+    padding: 10px 20px; /* Ajusta o padding */
+    background-color: var(--cor-fundo-gradiente-c);
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
+    border-radius: 16px; 
+    box-sizing: border-box; 
+    margin: 0 auto; 
+}
+
+/* Estiliza a imagem no rodapé */
+.rodape__imagem {
+    max-width: 200px; 
+    height: auto; 
+    margin-right: 5px; 
+}
+
+/* Estiliza o texto no rodapé */
+.rodape__texto {
+    color: var(--cor-texto-escuro);
+    font-family: "Kalnia Glaze", serif;
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    text-align: center;
+}
